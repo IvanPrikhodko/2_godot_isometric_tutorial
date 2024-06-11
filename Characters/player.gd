@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 @export var move_speed : float = 100
 
+#parameters/Idle/blend_position
+
 func _physics_process(_delta):
 	# Get input direction
 	var input_direction = Vector2(
