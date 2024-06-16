@@ -4,6 +4,13 @@ extends CharacterBody2D
 
 #parameters/Idle/blend_position
 
+@onready var animation_tree = $AnimationTree
+
+@export var starting_direction : Vector2 = Vector2(0, -1)
+
+func _ready():
+	animation_tree.set("parameters/Idle Animation/blend_position", starting_direction)
+
 func _physics_process(_delta):
 	# Get input direction
 	var input_direction = Vector2(
